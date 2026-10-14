@@ -31,7 +31,7 @@ if mac:
     shutil.copytree("dist/Didban.app", "dist/dmg/Didban.app", symlinks=True)
     subprocess.run(["ln", "-s", "/Applications", "dist/dmg/Applications"], check=True)
     subprocess.run(["hdiutil", "create", "-volname", "Didban", "-srcfolder", "dist/dmg", "-ov", "-format", "UDZO", dmg], check=True)
-    print("✔", dmg)
+    print("OK:", dmg)
 elif win:
-    print("✔ dist/Didban.exe")
+    print("OK: dist/Didban.exe")
 sys.exit(0)
